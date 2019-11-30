@@ -73,6 +73,27 @@
                     console.log(this.shadowRoot.querySelector('p'));
                 });
             }
+
+            ready() {
+                super.ready();
+                console.log('ready');
+            }
+
+            connectedCallback() {
+                super.connectedCallback();
+                console.log('connectedCallback');
+            }
+
+            disconnectedCallback() {
+                super.disconnectedCallback();
+                console.log('disconnectedCalback');
+            }
+
+            attributeChangedCallback(attrName, oldValue, newValue) {
+                super.attributeChangedCallback(attrName, oldValue, newValue);
+                console.log('attributeChangedCallback');
+            }
+
             __computeTitleAndDescription(title, description) {
                 return `${title} ${description}`;
             }
