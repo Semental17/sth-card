@@ -67,6 +67,12 @@
                     }
                 };
             }
+            constructor() {
+                super();
+                Polymer.RenderStatus.afterNeextRender(this, function() {
+                    console.log(this.shadowRoot.querySelector('p'));
+                });
+            }
             __computeTitleAndDescription(title, description) {
                 return `${title} ${description}`;
             }
