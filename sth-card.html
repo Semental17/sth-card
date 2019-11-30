@@ -13,9 +13,9 @@
    <a href="[[sharedUrl.url]]">[[sharedUrl.text]]</a>
    <a href="[[url.url]]">[[url.text]]</a>
 
-   <p hidden="[[isVisibleTitleAndDescription]]">[[titleAndDescription]]</p>
+   <p hidden="[[isVisbleTitleAndDescription]]">[[titleAndDescription]]</p>
 
-   [[titleAndDescription]]>
+    [[stores.0.name]]
   </template>
 
     <script>
@@ -69,26 +69,22 @@
             }
             constructor() {
                 super();
-                Polymer.RenderStatus.afterNeextRender(this, function() {
+                Polymer.RenderStatus.afterNextRender(this, function() {
                     console.log(this.shadowRoot.querySelector('p'));
                 });
             }
-
             ready() {
                 super.ready();
                 console.log('ready');
             }
-
             connectedCallback() {
                 super.connectedCallback();
                 console.log('connectedCallback');
             }
-
             disconnectedCallback() {
                 super.disconnectedCallback();
-                console.log('disconnectedCalback');
+                console.log('disconnectedCallback');
             }
-
             attributeChangedCallback(attrName, oldValue, newValue) {
                 super.attributeChangedCallback(attrName, oldValue, newValue);
                 console.log('attributeChangedCallback');
