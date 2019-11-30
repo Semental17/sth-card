@@ -13,6 +13,8 @@
    <a href="[[sharedUrl.url]]">[[sharedUrl.text]]</a>
    <a href="[[url.url]]">[[url.text]]</a>
 
+   <p hidden="isVisibleTitleAndDescription"></p>
+
    [[titleAndDescription]]>
   </template>
 
@@ -52,6 +54,16 @@
                     titleAndDescription: {
                         type: String,
                         computed: '__computeTitleAndDescription(title, description)'
+                    },
+                    isVisibleTitleAndDescription: {
+                        type: Boolean,
+                        value: false
+                    },
+                    stores: {
+                        type: Array,
+                        value() {
+                            return [];
+                        }
                     }
                 };
             }
