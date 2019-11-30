@@ -13,10 +13,17 @@
    <a href="[[sharedUrl.url]]">[[sharedUrl.text]]</a>
    <a href="[[url.url]]">[[url.text]]</a>
 
-   <p hidden="[[isVisbleTitleAndDescription]]">[[titleAndDescription]]</p>
+   <template is="dom-repeat" items="[[stores]]" as="store">
+       <div class="store">
+           <h1>[[store.name]]</h1>
+           <a href="[[store.url]]">ir a la tienda</a>
+       </div>
+   </template>
+
+    <p hidden="[[isVisbleTitleAndDescription]]">[[titleAndDescription]]</p>
 
     [[stores.0.name]]
-  </template>
+    </template>
 
     <script>
         /**
